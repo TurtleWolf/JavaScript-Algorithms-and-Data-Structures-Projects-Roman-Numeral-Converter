@@ -6,14 +6,23 @@ switch (num) {
   case num > 1000:
     console.log('M');
     break;
+  case num > 500:
+    console.log('D');
+    break;    
   case num > 100:
-    console.log('M');
+    console.log('C');
     break;
-  case num > 00:
-    console.log('M');
+  case num > 50:
+    console.log('L');
+    break;    
+  case num > 10:
+    console.log('X');
     break;
+  case num > 5:
+    console.log('V');
+    break;    
   case num > 1:
-    console.log('M');
+    console.log('I');
     break;
   default:
     console.log(num);
@@ -27,8 +36,10 @@ return num;
 
 convertToRoman(36);
 
-
-
-
-
-
+//  1       I  
+//  5       V  
+//  10      X  
+//  50      L  
+//  100     C  
+//  500     D  
+//  1000    M 
