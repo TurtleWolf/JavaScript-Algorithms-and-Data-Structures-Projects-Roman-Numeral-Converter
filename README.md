@@ -72,3 +72,30 @@ convertToRoman(3999); // should return "MMMCMXCIX"
 500     D  
 1000    M  
 ```
+
+[switch(true)](https://jsperf.com/if-else-chain-vs-switch-true "If-Else Chain VS Switch(true)")  
+```	
+for(var i = len; i--;) {
+    var str = strs[i];
+    
+    switch(true) {
+        case /p{2}le/.test(str):
+            var some_var = 'found apple';
+            break;
+        case /(an){2}a/.test(str):
+            var some_var = 'found banana';
+            break;
+        case /^[a-z][a-z][a-z][a-z]$/.test(str):
+            var some_var = 'found pear';
+            break;
+        case (str.indexOf("lemon") != -1):
+            var some_var = 'found lemon';
+            break;
+        case /ape/.test(str):
+            var some_var = 'found grape';
+            break;
+        default:
+            var some_var = 'found else (orange)';
+    }  
+}
+```
