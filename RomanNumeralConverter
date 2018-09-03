@@ -1,7 +1,6 @@
 function convertToRoman(num) {
 
 while (num > 0){
-
 switch (true) {
   case (num > 1000):
     console.log('M');
@@ -26,7 +25,11 @@ switch (true) {
   case (num > 5):
     console.log('V');
     num = num -5;
-    break;    
+    break;
+  case (num > 4):
+    console.log('IV');
+    num = num -5;
+    break;
   case (num > 0):
     console.log('I');
     num = num -1;
@@ -37,7 +40,11 @@ switch (true) {
   }//end of while..
 return num;
 }
-convertToRoman(36);
+//  convertToRoman(3);
+  convertToRoman(4);
+//  convertToRoman(5);
+//  convertToRoman(6);
+//convertToRoman(36);
 //  1       I  
 //  5       V  
 //  10      X  
