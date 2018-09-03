@@ -1,49 +1,91 @@
 function convertToRoman(num) {
-
+let joinedArray = '';
 while (num > 0){
 switch (true) {
-  case (num > 1000):
-    console.log('M');
+  case (num > 999):
+    //console.log('M');
+    joinedArray = joinedArray.concat('M');
+    //console.log(joinedArray);
     num = num -1000;
     break;
   case (num > 500):
-    console.log('D');
+    //console.log('D');
+    joinedArray = joinedArray.concat('D');
+    //console.log(joinedArray);
     num = num -500;
     break;    
   case (num > 100):
-    console.log('C');
+    //console.log('C');
+    joinedArray = joinedArray.concat('C');
+    //console.log(joinedArray);
     num = num -100;
     break;
   case (num > 50):
-    console.log('L');
+    //console.log('L');
+    joinedArray = joinedArray.concat('L');
+    //console.log(joinedArray);
     num = num -50;
     break;    
-  case (num > 10):
-    console.log('X');
+  case (num > 9):
+    //console.log('X');
+    joinedArray = joinedArray.concat('X');
+    //console.log(joinedArray);    
     num = num -10;
     break;
-  case (num > 5):
-    console.log('V');
+  case (num > 8):
+    //console.log('IX');
+    joinedArray = joinedArray.concat('IX');
+    //console.log(joinedArray);    
+    num = num -9;
+    break;     
+  case (num > 4):
+    //console.log('V');
+    joinedArray = joinedArray.concat('V');
+    //console.log(joinedArray);    
     num = num -5;
     break;
-  case (num > 4):
-    console.log('IV');
+  case (num > 3):
+    //console.log('IV');
+    joinedArray = joinedArray.concat('IV');
+    //console.log(joinedArray);    
     num = num -5;
     break;
   case (num > 0):
-    console.log('I');
+    //console.log('I');
+    joinedArray = joinedArray.concat('I');
+    //console.log(joinedArray);
     num = num -1;
     break;
   default:
     console.log(num);
   }//end of switch
   }//end of while..
-return num;
+//return num;
+  console.log(joinedArray);
+  return joinedArray;
 }
 //  convertToRoman(3);
-  convertToRoman(4);
+//  convertToRoman(4);
 //  convertToRoman(5);
 //  convertToRoman(6);
+//  convertToRoman(7);
+//  convertToRoman(8);
+//  convertToRoman(9);
+//  convertToRoman(10);
+//  convertToRoman(11);
+//  convertToRoman(12);
+//  convertToRoman(13);
+//  convertToRoman(14);
+//  convertToRoman(15);
+//  convertToRoman(16);
+//  convertToRoman(17);
+//  convertToRoman(18);
+//  convertToRoman(19);
+//  convertToRoman(20);
+//  convertToRoman(21);
+//  convertToRoman(22);
+//  convertToRoman(23);
+//  convertToRoman(1000);
 //convertToRoman(36);
 //  1       I  
 //  5       V  
