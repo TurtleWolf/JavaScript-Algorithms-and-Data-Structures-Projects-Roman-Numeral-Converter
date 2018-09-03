@@ -2,6 +2,24 @@
 [Roman Numeral Converter](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/roman-numeral-converter "Free Code Camp")  
 Convert the given number into a roman numeral.  
 
+
+### Forming Numbers - The Rules
+When a symbol appears after a larger (or equal) symbol it is added
+
+Example: VI = V + I = 5 + 1 = 6
+Example: LXX = L + X + X = 50 + 10 + 10 = 70
+But if the symbol appears before a larger symbol it is subtracted
+
+Example: IV = V − I = 5 − 1 = 4
+Example: IX = X − I = 10 − 1 = 9
+To Remember: After Larger is Added
+
+Don't use the same symbol more than three times in a row
+
+### How to Convert to Roman Numerals
+Break the number into Thousands, Hundreds, Tens and Ones, and write down each in turn.
+
+
 :speech_balloon: Hint: 1  
 Creating two arrays, one with the Roman Numerals and one with the decimal equivalent for the new forms will be very helpful.  
 
