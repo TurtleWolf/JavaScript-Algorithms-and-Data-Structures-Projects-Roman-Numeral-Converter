@@ -105,6 +105,7 @@ switch (true) {
 //  convertToRoman(40); //  should return "XL"
 //  convertToRoman(44); // should return "XLIV".
 //  convertToRoman(45); //  should return "XLV"
+convertToRoman(49); //  should return "XLIX"
 //  convertToRoman(68); //  should return "LXVIII"
 //  convertToRoman(96); //  should return "XCVI"
 //  convertToRoman(97); //  should return "XCVII"
