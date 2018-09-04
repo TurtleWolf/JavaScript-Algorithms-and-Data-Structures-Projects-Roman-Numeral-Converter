@@ -2,86 +2,73 @@ function convertToRoman(num) {
 let romanString = '';
 while (num > 0){
 switch (true) {
+  // triple digits
   case (num > 999):
-    //console.log('M');
     romanString = romanString.concat('M');
-    //console.log(joinedArray);
     num = num -1000;
     break;
-  case (num > 500):
-    //console.log('D');
+  case (num > 899):
+    romanString = romanString.concat('CM');
+    num = num -900;
+    break;    
+  case (num > 499):
     romanString = romanString.concat('D');
-    //console.log(joinedArray);
     num = num -500;
     break;    
-  case (num > 100):
-    //console.log('C');
-    romanString = romanString.concat('C');
-    //console.log(joinedArray);
-    num = num -100;
+  case (num > 499):
+    romanString = romanString.concat('D');
+    num = num -500;
+    break;    
+  case (num > 399):
+    romanString = romanString.concat('CD');
+    num = num -400;
     break;
-    
+  case (num > 99):
+    romanString = romanString.concat('C');
+    num = num -100;
+    break;    
 // double digits    
   case (num > 90):
-    //console.log('X');
-    romanString = romanString.concat('IX');
+    romanString = romanString.concat('XC');
     console.log(romanString);    
     num = num -90;
     break;
   case (num > 80):
-    //console.log('IX');
-    romanString = romanString.concat('LXXX');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('LXXX');    
     num = num -80;
     break; 
   case (num > 50):
-    //console.log('V');
-    romanString = romanString.concat('L');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('L');    
     num = num -50;
     break;
   case (num > 39):
-    //console.log('V');
-    romanString = romanString.concat('XL');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('XL');    
     num = num -40;
     break;
   case (num > 30):
-    //console.log('IV');
-    romanString = romanString.concat('XXX');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('XXX');    
     num = num -30;
-    break;
-    
+    break;    
 //single digits    
   case (num > 9):
-    //console.log('X');
     romanString = romanString.concat('X');
     console.log(romanString);    
     num = num -10;
     break;
   case (num > 8):
-    //console.log('IX');
-    romanString = romanString.concat('IX');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('IX');    
     num = num -9;
     break;     
   case (num > 4):
-    //console.log('V');
-    romanString = romanString.concat('V');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('V');    
     num = num -5;
     break;
   case (num > 3):
-    //console.log('IV');
-    romanString = romanString.concat('IV');
-    //console.log(joinedArray);    
+    romanString = romanString.concat('IV');    
     num = num -5;
     break;
   case (num > 0):
-    //console.log('I');
     romanString = romanString.concat('I');
-    //console.log(joinedArray);
     num = num -1;
     break;
   default:
@@ -90,23 +77,7 @@ switch (true) {
   }//end of while..
   console.log(romanString);
   return romanString;
-}
-//    convertToRoman(39); // should return "XXXIX".
-//  convertToRoman(42); // should return "XLII".
-//  convertToRoman(40); //  should return "XL"
-//  convertToRoman(44); // should return "XLIV".
-//  convertToRoman(45); //  should return "XLV"
-
-//  convertToRoman(68); //  should return "LXVIII"
-convertToRoman(97); //  should return "XCVII"
-//  convertToRoman(99); //  should return "XCIX"
-//  convertToRoman(400); //  should return "CD"
-//  convertToRoman(500); //  should return "D"
-//  convertToRoman(649); //  should return "DCXLIX"
-//  convertToRoman(798); //  should return "DCCXCVIII"
-//  convertToRoman(891); //  should return "DCCCXCI"
-//  convertToRoman(3999); //  should return "MMMCMXCIX"
-
+}//end of function convertToRoman(num)
 //  convertToRoman(3);
 //  convertToRoman(4);
 //  convertToRoman(5);
@@ -128,12 +99,25 @@ convertToRoman(97); //  should return "XCVII"
 //  convertToRoman(21);
 //  convertToRoman(22);
 //  convertToRoman(23);
+//  convertToRoman(36);
+//  convertToRoman(39); // should return "XXXIX".
+//  convertToRoman(42); // should return "XLII".
+//  convertToRoman(40); //  should return "XL"
+//  convertToRoman(44); // should return "XLIV".
+//  convertToRoman(45); //  should return "XLV"
+//  convertToRoman(68); //  should return "LXVIII"
+//  convertToRoman(96); //  should return "XCVI"
+//  convertToRoman(97); //  should return "XCVII"
+//  convertToRoman(98); //  should return "XCVIII"
+//  convertToRoman(99); //  should return "XCIX"
+//  convertToRoman(100); //  should return "C"
+//  convertToRoman(333); //  should return "CCCXXXIII"
+//  convertToRoman(400); //  should return "CD"
+//  convertToRoman(500); //  should return "D"
+//  convertToRoman(666); //  should return "DCLXVI"
+//  convertToRoman(999); //  should return "CMXCIX"
 //  convertToRoman(1000);
-//convertToRoman(36);
-//  1       I  
-//  5       V  
-//  10      X  
-//  50      L  
-//  100     C  
-//  500     D  
-//  1000    M 
+//  convertToRoman(649); //  should return "DCXLIX"
+//  convertToRoman(798); //  should return "DCCXCVIII"
+//  convertToRoman(891); //  should return "DCCCXCI"
+//  convertToRoman(3999); //  should return "MMMCMXCIX"
